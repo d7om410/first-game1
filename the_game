@@ -1,0 +1,32 @@
+def play_game():
+
+ print("""
+█░█░█ █▀▀ █░░ █▀▀ █▀█ █▀▄▀█ █▀▀   █ █▄░█   █▀▀ █░█ █▀▀ █ █░░
+▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █░▀░█ ██▄   █ █░▀█   ██▄ ▀▄▀ ██▄ █ █▄▄""")
+ print("""welcome to my island ☠️,
+There are two doors in front of you . 🚪 a red door and 🚪 a blue door""")
+ chose = input("which door do you want to open? ")
+ if chose.lower() == "blue":
+  print("Opes! You chose the crocodile door.")
+  print("Game over!🐊🐊🐊")
+ elif chose.lower() == "red":
+  print("Great! Now you enterd a room.")
+  print("you found three boxs: 🎁 white, 🎁 black, 🎁 green")
+  chose_box = input("which box do you open? ")
+  if chose_box.lower() == "white":
+    print("Opes! you opend a box filled with snakes 🐍🐍🐍")
+  elif chose_box.lower() == "black":
+    print("Opes! you opend a box filled with spiders 🕷️🕷️🕷️")
+  elif chose_box.lower() == "green":
+    print("Congratulations! you found the treasure 💰💰💰")
+  else:
+    print("Invalid chose! 🤷‍♂️")
+ else:
+  print("Invalid chose! 🤷‍♂️")
+if __name__ == "__main__":
+    while True:
+        play_game()
+        play_again = input("Would you do it again? (yes/no): ").lower()
+        if play_again != 'yes':
+            print("Thanks!")
+            break
